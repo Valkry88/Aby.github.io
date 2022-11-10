@@ -3504,6 +3504,7 @@ textarea.form-control-lg {
   height: 0;
   overflow: hidden;
   transition: height 0.35s ease;
+  cursor: pointer;
 }
 @media (prefers-reduced-motion: reduce) {
   .collapsing {
@@ -4020,7 +4021,7 @@ textarea.form-control-lg {
 }
 
 .navbar {
-  position: relative;
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -4028,6 +4029,7 @@ textarea.form-control-lg {
   padding-top: 0.10rem;
   padding-bottom: 0.10rem;
 }
+ 
 .navbar > .container,
 .navbar > .container-fluid,
 .navbar > .container-sm,
@@ -4044,7 +4046,7 @@ textarea.form-control-lg {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.50rem;
+  font-size: 1.25rem;
   text-decoration: none;
   white-space: nowrap;
   font-family: italic;
@@ -4075,15 +4077,16 @@ textarea.form-control-lg {
   flex-grow: 1;
   align-items: center;
 }
+.navbar-toggler:hover {
+  opacity: 0.7;
+}
 
 .navbar-toggler {
-  padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  transition: box-shadow 0.15s ease-in-out;
+  border: 0;
+  border-radius: 0.15rem;
 }
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
@@ -4092,15 +4095,15 @@ textarea.form-control-lg {
 }
 .navbar-toggler:hover {
   text-decoration: none;
+  position: center;
 }
 .navbar-toggler:focus {
   text-decoration: none;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem;
 }
 
 .navbar-toggler-icon {
-  display: inline-block;
+  display: inline-flex;
   width: 1.5em;
   height: 1.5em;
   vertical-align: middle;
